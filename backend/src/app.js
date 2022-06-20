@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -5,7 +6,7 @@ const app = express();
 const apiMoviesRouter = require("./routes/api/movies");
 const apiGenresRouter = require("./routes/api/genres");
 const apiActorsRouter = require("./routes/api/actors");
-
+app.use(cors("*"));
 app.use(express.urlencoded({ extended: false }));
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
