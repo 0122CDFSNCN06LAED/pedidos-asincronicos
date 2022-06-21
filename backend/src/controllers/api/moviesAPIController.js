@@ -89,6 +89,7 @@ const moviesAPIController = {
     },
     update: (req, res) => {
         let movieId = req.params.id;
+        console.log(req.body);
         db.Movie.update(
             {
                 title: req.body.title,

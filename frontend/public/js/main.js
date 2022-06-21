@@ -11,8 +11,12 @@ window.onload = () => {
             return respuesta.json();
         })
         .then(function (data) {
-            console.log(data);
+            // peliculas guardarlo en un array llamado "movies"
             data.data.forEach((movie) => {
+                // renderizar pagina
+                // hacer un for each sobre "movies"
+                // mostrar los contenedores como estaban en el ejemplo de frontend
+                // mostrar en el archivo html mediante innerhtml
                 const card = `<div class="card">
                <h1>${movie.title}</h1>
                <p>Rating:${movie.rating}</p>
@@ -22,11 +26,4 @@ window.onload = () => {
                 container.innerHTML += card;
             });
         });
-
-    // peliculas guardarlo en un array llamado "movies"
-    // renderizar pagina
-    // hacer un for each sobre "movies"
-    // mostrar los contenedores como estaban en el ejemplo de frontend
-    // mostrar en el archivo html mediante innerhtml
-    //
 };

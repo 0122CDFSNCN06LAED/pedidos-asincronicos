@@ -77,6 +77,7 @@ const actorsAPIController = {
     },
     update: (req, res) => {
         let actorId = req.params.id;
+
         db.Actor.update(
             {
                 first_name: req.body.first_name,

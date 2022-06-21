@@ -8,6 +8,8 @@ const apiGenresRouter = require("./routes/api/genres");
 const apiActorsRouter = require("./routes/api/actors");
 app.use(cors("*"));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 const methodOverride = require("method-override");
 app.use(methodOverride("_method"));
 
